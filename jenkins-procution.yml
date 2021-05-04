@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  #Jenkins Service
+  jenkins:
+    image: jenkins/jenkins:lts # pulling only long term supported version
+    volumes:
+      - ./jenkins_data:/var/jenkins_home
+    ports:
+      - 8080:8080
+    container_name: jenkins
+    networks:
+      - jenkins_network
+    privileged: true          
+    user: root
+networks:
+  jenkins_network:
+volumes:
+  jenkins_data:
+
+    
+
