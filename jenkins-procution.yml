@@ -3,7 +3,7 @@ version: '3'
 services:
   #Jenkins Service
   jenkins:
-    image: jenkins/jenkins:lts # pulling only long term supported version
+    image: jenkins/jenkins:lts-alpine # pulling only long term supported version
     volumes:
       - ./jenkins_data:/var/jenkins_home
     ports:
